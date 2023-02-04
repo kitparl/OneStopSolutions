@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+
+    <!-- adding font awsome icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/32f181d7c4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/operator.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/popup.css">
+
+
+</head>
+<body>
+
+            <!-- popup div  -->
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2 style="color: red;"><span></span></h2>
+                    <a id="close" id="" href="#">&times;</a>
+                    <div class="content" id="popAlert">
+                    
+                    </div>
+                </div>
+            </div>
+
+    <nav>
+        <div id="nav">
+            <div>
+                <img src="../resources/OneStopSolution.png" id="logo_fix" alt="logo">
+            </div>
+            <div id="options">
+                <li onclick="logOutOper()" class="changeColorLogout-delete"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="opeSec" style="background-image: url('https://images.unsplash.com/photo-1533698215883-e2edc689fef5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5pY2lhbnN8fHx8fHwxNjc1MDg5ODE2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600')">
+        <div>
+            <span>Operator Profile</span>
+          <table>
+            <tbody id="profile">
+            </tbody>
+          </table>
+        </div>
+
+        <div id="issueByCustId">
+            <span>Get Issue By Customer Id</span>
+            <form id="issueByCustId" class="operFormCss hide">
+                <label>Customer Id</label>
+                <input type="number" name="customerId" placeholder="Enter Customer Id" id="cxId">
+                <input type="submit" value="Get Issue">
+            </form>
+        </div>
+
+        <div id="issueByType">
+            <span>Get Issues By Type</span>
+            <form class="operFormCss hide" id="issueByType">
+                <label>Select Issue Type</label>
+                <select name="type" id="type">
+                    <option value="">Select Type</option>
+                    <option value="Television">Television</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="Airpods">Airpods</option>
+                    <option value="I Pad">I Pad</option>
+                </select>
+                <input type="submit" value="Get Issue">
+            </form>
+        </div>
+
+        <div id="closeByIssueId">
+            <span>Close Issue</span>
+            <form class="operFormCss hide" id="closeIssueById">
+                <label>Customer Id</label>
+                <input type="number" name="customerId" placeholder="Enter Customer Id" id="closeId">
+                <input type="submit" value="Get Issue">
+            </form>
+        </div>
+       
+        <div id="getCustById">
+            <span>Get Customer By Id</span>
+            <form id="getCustomerById" class="operFormCss hide">
+                <label>Customer Id</label>
+                <input type="number" name="customerId" placeholder="Enter Customer Id" id="cId">
+                <input type="submit" value="Get Customer">
+            </form>
+        </div>
+
+        <div id="getCustByFirstname">
+            <span>Get Customer By FirstName</span>
+            <form id="getCustomerByFirstname" class="operFormCss hide">
+                <label>Customer Id</label>
+                <input type="text" name="customerId" placeholder="Enter Customer FirstName" id="fname">
+                <input type="submit" value="Get Customer">
+            </form>
+        </div>
+
+
+        <div id="getCustByEmail">
+            <span>Get Customer By Email</span>
+            <form class="operFormCss hide" id="getCustomerByEmail">
+                <label>Customer Email</label>
+                <input type="email" id="em" name="customeremail" placeholder="Enter Customer Email">
+                <input type="submit" value="Get Customer">
+            </form>
+        </div>
+
+        <div id="lockCustomer">
+            <span>lock Customer</span>
+            <form class="operFormCss hide" id="lockCx">
+                <label>Customer Id</label>
+                <input type="number" name="customerId" placeholder="Enter Customer Id" id="customerLockId">
+                <input type="submit" value="Get Customer">
+            </form>
+        </div>
+
+        <div id="createSoln">
+            <span>Create Solution</span>
+            <form class="operFormCss hide" id="createSolution">
+                <label>Issue Id</label>
+                <input type="number" name="issueId" id="issueId">
+                <label>Solution Description</label>
+                <textarea name="description" maxlength="225" id="desc"></textarea>
+                <input type="submit" value="Create Soultion">
+            </form>
+        </div>
+
+
+
+        <div id="getSolutionById">
+            <span>Get Solutions Of IssueId</span>
+            <form class="operFormCss hide" id="getSolutionByIssueId">
+                <label>Issue Id</label>
+                <input type="number" name="issueId" id="getIssueId">
+                <input type="submit" value="Get Solution">
+            </form>
+
+            <table class="hide">
+                <thead>
+                    <td>Id</td>
+                    <td>Description</td>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="deleteSoulById">
+            <span>Delete Solution By Id</span>
+            <form class="operFormCss hide" id="deleteSolnById">
+                <label>Solution Id</label>
+                <input type="number" name="solutionId" id="solnId">
+                <input type="submit" value="Delete Solution">
+            </form>
+        </div>
+
+    </section>
+    
+</body>
+</html>
+<script src="../js/operator.js"></script>
+<script src="../js/popup.js"></script>
