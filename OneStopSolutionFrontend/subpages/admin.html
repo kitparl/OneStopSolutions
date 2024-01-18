@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+
+    <!-- adding font awsome icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/32f181d7c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/popup.css">
+ 
+</head>
+<body>
+
+        <!-- popup div  -->
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2 style="color: red;"><span></span></h2>
+                <a id="close" id="" href="#">&times;</a>
+                <div class="content" id="popAlert">
+                
+                </div>
+            </div>
+        </div>
+
+    <nav>
+        <div id="nav">
+            <div>
+                <img src="../resources/OneStopSolution.png" style="width: 100px;
+                position: fixed;" alt="logo">
+            </div>
+            <div id="options">
+                <li onclick="logOutAdmin()" style="color: goldenrod;"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="adminSec" style="background-image: url('https://images.unsplash.com/photo-1575886876763-10ea19d18fac?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8b2ZmaWNlfHx8fHx8MTY3NTA5MTE0Mw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600')">
+
+    
+
+        <div>
+            <span>Admin Profile</span>
+          <table>
+            <tbody id="profile">
+
+            </tbody>
+          </table>
+        </div>
+
+        <div id="getAllDepart">
+            <span id="getAllDept">Get All Department</span>
+            <table class="hide">
+                <thead id="thead-dept">
+                </thead>
+            </table>
+        </div>
+
+        <div id="createDepart">
+            <span>Create Department</span>
+            <form class="admiFormCss hide" id="deptForm">
+                <label>Department Name</label>
+                <input type="text" name="departmentName" id="deptName">
+                <input type="submit" value="Create" id="createDept">
+            </form>
+        </div>
+
+        <div id="deleteDepart">
+            <span>Delete Department</span>
+            <form class="admiFormCss hide" id="deleteDept">
+                <label>Department Id</label>
+                <input type="number" name="departmentId" id="dId">
+                <input type="submit" value="Delete" id="deleteDept">
+            </form>
+        </div>
+
+        <div id="updateDepart">
+            <span>Update Department</span>
+            <form class="admiFormCss hide" id="updateDept">
+                <label>Department Id</label>
+                <input type="number" name="departmentId" id="updateDeptId">
+                <label>Department Name</label>
+                <input type="text" name="departmentName" id="updateDeptName">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+
+        <div id="getDepartById">
+            <span>Get Department By Id</span>
+            <form class="admiFormCss hide" id="getDeptById">
+                <label>Department Id</label>
+                <input type="number" name="departmentId" id="getDeptByIdId">
+                <input type="submit" value="Get" 
+                 >
+            </form>
+        </div>
+
+        <div id="createOperator">
+
+
+            <span>Create Operator</span>
+            <form class="admiFormCss hide" id="createOperator">
+                <label>FirstName</label>
+                <input type="text" name="firstname" id="firstName">
+                <label>LastName</label>
+                <input type="text" name="lastname" id="lastName">
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+                <label>Mobile</label>
+                <input type="text" name="mobile" id="mobile">
+                <label>Department Id</label>
+                <input type="number" name="departmentId" id="oprDeptId">
+                <label>Username</label>
+                <input type="text" name="username" id="username">
+                <label>Password</label>
+                <input type="password" name="password" id="password">
+                <label>Operator Type</label>
+                <select name="type" id="type">
+                    <option value="">Select Type</option>
+                    <option value="Television">Television</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="Airpods">Airpods</option>
+                    <option value="I Pad">I Pad</option>
+                </select>
+                <input type="submit" value="Register Operator">
+            </form>
+        </div>
+
+        <div id="getOperById">
+            <span>Get Operator By Id</span>
+            <form class="admiFormCss hide" id="getOperatorById">
+                <label>Operator Id</label>
+                <input type="number" name="departmentId" id="getOperatorByIdId">
+                <input type="submit" value="Get">
+            </form>
+        </div>
+
+        <div id="getAllOperById">
+            <span id="getAllOperator">Get All Operator</span>
+        </div>
+
+    </section>
+    
+</body>
+</html>
+<script src="../js/admin.js"></script>
+<script src="../js/popup.js"></script>

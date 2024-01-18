@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Solutions</title>
+    <link rel="icon" href="../img/Title Logo.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/f426985a11.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/customerRegister.css">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Montserrat:wght@100;700&family=Poppins:wght@500;600&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/popup.css">
+
+</head>
+<body>
+
+        <!-- popup div  -->
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2 style="color: red;"><span></span></h2>
+                <a id="close" id="" href="#">&times;</a>
+                <div class="content" id="popAlert">
+                </div>
+            </div>
+        </div>
+
+
+    <div id="login">
+        
+        <form action="" id="registerCustomer">
+            <p class="userSign"><i class="fa-solid fa-user"></i></p>
+            <div>
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" name="firstName" placeholder="Enter First Name" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" name="lastName" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Enter Email" required>
+            <div>
+                <div>
+                    <label for="phone"  >Phone No.</label>
+                    <input type="tel" name="phone" maxlength="10" minlength="10" placeholder="Enter Phone No." id="mobile" required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter City Name" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="username">Username.</label>
+                    <input type="text" name="username" maxlength="10" minlength="5" placeholder="Username." id="username" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" id="password" required>
+                </div>
+            </div>
+            <input type="submit" value="Register" id="register">
+            <p>Already have a account? <a href="customerLogin.html">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>
+<script src="../js/popup.js"></script>
+<script src="../js/customerRegister.js"></script>

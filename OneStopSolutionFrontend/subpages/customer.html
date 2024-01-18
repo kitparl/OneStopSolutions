@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/customer.css">
+
+    <!-- adding font awsome icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/32f181d7c4.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+                <!-- popup div  -->
+
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2 style="color: red;"><span></span></h2>
+                        <a id="close" id="" href="#">&times;</a>
+                        <div class="content" id="popAlert">
+                        
+                        </div>
+                    </div>
+                </div>
+    
+    <nav>
+        <div id="nav">
+            <div>
+                <img src="../resources/OneStopSolution.png" id="logo_fix" alt="logo">
+            </div>
+            <div id="options">
+                <li onclick="logOutCustomer()" class="changeColorLogout-delete"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</li>
+                <li  onclick="deleteCustomer()" class="changeColorLogout-delete"><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</li>
+            </div>
+        </div>
+    </nav>
+    <section id="cusSec" style="background-image: url('https://images.unsplash.com/photo-1591100169166-2c0affa3b74a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHBob25lc3x8fHx8fDE2NzUwOTEwMTU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600')">
+        <div>
+            <span>Customer Profile</span>
+          <table>
+            <tbody id="profile">
+            </tbody>
+          </table>
+        </div>
+
+        <div id="issues">
+            <span onclick="viewCustomerIssue()">View Issues</span>
+        </div>
+
+        <div id="createIssue">
+            <span>Create Issue</span>
+            <form class="custFormCss hide" id="createIssueById" >
+                <label>Issue Type</label>
+                <select name="type" id="issueType">
+                    <option value="">Select Type</option>
+                    <option value="Television">Television</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="Airpods">Airpods</option>
+                    <option value="I Pad">I Pad</option>
+                </select>
+                <label>Description</label>
+                <textarea type="text" name="decription" maxlength="255" id="issueDesc"></textarea>
+                <input type="submit" value="Create Issue">
+            </form>
+        </div>
+
+        <div id="updatePassword">
+            <span>Update Password</span>
+            <form class="custFormCss hide" id="updatePsdById">
+                <label>Old Password</label>
+                <input type="text" name="oldPassword" id="oldPsd">
+                <label>New Password</label>
+                <input type="text" name="newPassword" id="newPsd">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+
+        <div id="issueById">
+            <span>Get Issue By Id</span>
+            <form class="custFormCss hide" id="getIssueById">
+                <label>Issue Id</label>
+                <input type="number" name="issueId" id="getByIssueId">
+                <input type="submit" value="Get Issue">
+            </form>
+        </div>
+
+        <div id="modifyIssue">
+            <span>Modify Issue</span>
+            <form class="custFormCss hide" id="modifyByIssueId">
+                <label>Issue Id</label>
+                <input type="number" name="issueId" placeholder="Enter Id" id="issueIdForModify">
+                <label>Descreption</label>
+                <textarea type="password" name="decription" maxlength="255" id="modifyDesc" placeholder="Enter Description"></textarea>
+                <input type="submit" value="Modify Issue">
+            </form>
+        </div>
+
+        <div id="reOpenIssue">
+            <span>Reopen Issue</span>
+            <form class="custFormCss hide" id="reOpenIssueById">
+                <label>Issue Id</label>
+                <input type="number" name="issueId" placeholder="Enter Id" id="reopenIssueId">
+                <input type="submit" value="Reopen Issue">
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
+<script src="../js/customer.js"></script>
+<script src="../js/popup.js"></script>
