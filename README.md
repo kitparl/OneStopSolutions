@@ -115,7 +115,3 @@ The goal of the project is to streamline the process of resolving electronic iss
 ## Deployed Front End
 
 [Link](https://musical-treacle-054b23.netlify.app/)
-
-## Video Demonstration
-
-[Link](https://drive.google.com/file/d/1Eekqb6kX0Q4KEFlaFlHw9Q-BdTDKQ0MD/view?usp=sharing)
